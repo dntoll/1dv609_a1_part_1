@@ -17,7 +17,7 @@
 | Coverage | 100% | 100% | 100% | 100% | |
 
 ```java
-
+ 
 
 //Java Version 1 Correct Helper
 public class Helper {

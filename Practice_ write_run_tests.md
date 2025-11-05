@@ -21,7 +21,7 @@ We provide Java and .js code.
 * Developer Testing - Chapter 7 - 10
 * Testing framework online manuals
 * Lecture material
-
+ 
 
 ## Task 1: Write an optimized test suite
 Write a test suite for the Password class provided. 
