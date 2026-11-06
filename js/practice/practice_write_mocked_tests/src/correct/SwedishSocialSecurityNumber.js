@@ -11,7 +11,7 @@ class SwedishSocialSecurityNumber {
 
         const trimmedSS = stringInput.trim(); 
 
-        if (helper.isNotCorrectLength(trimmedSS)) {
+        if (helper.isCorrectLength(trimmedSS) === false) {
             throw new Error("To short, must be 11 characters");
         }
         if (helper.isCorrectFormat(trimmedSS) === false) {
@@ -24,7 +24,7 @@ class SwedishSocialSecurityNumber {
             throw new Error("Invalid month in SSN");
         }
         if (helper.isValidDay(this.getDay()) === false) {
-            throw new Error("Invalid month in SSN");
+            throw new Error("Invalid day in SSN");
         }
         if (helper.luhnisCorrect(this.#ssn) === false) {
             throw new Error("Invalid SSN according to Luhn's algorithm");

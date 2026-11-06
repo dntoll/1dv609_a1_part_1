@@ -26,6 +26,7 @@ Run the following commands **from the project folder containing the Gradle wrapp
 ./gradlew test
 ```
 
+<<<<<<< HEAD
 On Windows PowerShell, use `.\gradlew.bat build` and `.\gradlew.bat test`.
 
 For Testing with mocks, enter `java/practice/practice_with_mocked_tests/` from the repository root and run its wrapper in the same way. **Run and complete both projects.**
@@ -35,6 +36,51 @@ Useful commands within either project:
 ```bash
 ./gradlew test --info
 ./gradlew test --tests com.lab.PasswordTest
+=======
+Run tests with detailed output:
+```bash
+./gradlew test --info
+```
+
+Run a specific test class:
+```bash
+./gradlew test --tests PasswordTest
+```
+
+Run tests for a specific test in a test file:
+```bash
+./gradlew test --tests PasswordTest.shouldAlwaysPass
+```
+
+## Example Output
+
+```bash
+PasswordTest > shouldThrowExceptionOnShortPassword() PASSED
+PasswordTest > shouldThrowExceptionOnPasswordWithoutNumber() PASSED
+PasswordTest > shouldAcceptValidPassword() PASSED
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 4 executed
+```
+
+## VS Code
+
+If using VS Code:
+1. Open the project folder
+2. Navigate to any test file
+3. Click "Run Test" button above test methods
+4. Or right-click → "Run Java Tests"
+
+## Common Commands
+
+**Clean build:**
+```bash
+./gradlew clean build
+```
+
+**Run tests continuously (re-run on file changes):**
+```bash
+>>>>>>> 2ec2bac53634ab53c9a1585abe68473301b3115b
 ./gradlew test --continuous
 ```
 

@@ -24,7 +24,7 @@ class SwedishSocialSecurityNumber {
             throw new Error("Invalid month in SSN");
         }
         if (helper.isValidDay(this.getDay()) === false) {
-            throw new Error("Invalid month in SSN");
+            throw new Error("Invalid day in SSN");
         }
         if (helper.luhnisCorrect(this.#ssn) === false) {
             throw new Error("Invalid SSN according to Luhn's algorithm");

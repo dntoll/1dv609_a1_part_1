@@ -31,4 +31,42 @@ Continue with **[A1 Part 2: Agentic Testing](https://coursepress.lnu.se/kurser/m
 
 ## Reflection questions
 
+<<<<<<< HEAD
 The questions have moved to [Assessment of Alternative 1](instructions/assessment.md#reflection-questions).
+=======
+Prepare: 
+* Disable AI in your editor for the examination. No tab to complete.
+* Be prepared to show the results of the two practice tasks.
+* Be prepared to run the tests, to measure coverage, and use mocking.
+* Be prepared to edit and write code.
+* Be prepared to answer questions about any part of your code.
+* During examination you will write one or more unit test for new a function that you will be given during examination. You should be able to write unit-tests for that function, run the test, measure coverage. You should be able to select "assert/expect method" depending on the type of function to one of the suitable used in practice tasks.
+   * Prepare so you know how to test:
+      * Exceptions, return values, calls on the mock object(s). (jest: toHaveBeenCalledWith, junit: verify)
+      * Direct and indirect input
+      * Tests of constructors and methods on the object, in Javascript, also on functions without objects
+      * mock dependencies
+* During the examination you are also asked a couple of questions related to the practice task and the study material specified.
+* You are not allowed to use AI to solve the task during the examination. You may look at the practice tasks during this examination.
+* You will also be asked questions from the list below.
+
+
+
+### Reflection Questions
+
+During Examination you may be asked these or related questions. You should be able to answer these questions in depth. 
+
+- How many tests are needed to find all bugs in the examples? Do you think this is enough testing for these problems? Too much?
+- What are the missing tests you think would be good to add? 
+- What is **good test data** for this example and why?
+* Should private methods be tested? What are the pros and cons of having a "helper class" instead of private methods?
+- Can all code be covered by code coverage? Why not? 
+- What kind of "asserts"/"expects" can be done in your testing framework?
+- What kind(s) of Code Coverage is shown in your code coverage tool? What does the different coverage values mean?
+- Why should a single test only have one assert/expect?
+* What is the two main purposes of using mocks?
+* Why is it good if a test for a SUT is independent of the classes that the SUT depends on?
+* Can all bugs be found by testing?
+- Do all tests need asserts/expects?
+- Can we with testing prove that we are 100% bug free?
+>>>>>>> 2ec2bac53634ab53c9a1585abe68473301b3115b
