@@ -1,54 +1,54 @@
-# Javascript version
+# JavaScript setup for Alternative 1 (A1.a1)
 
-The js project is arranged as follows
+**Both [Password testing](../instructions/password-testing.md) and [Testing with mocks](../instructions/testing-with-mocks.md) are mandatory.** This folder contains the JavaScript versions of both exercises.
 
-* /examination/ folder is placeholder for the examination, dont change it until then
-* /practice/ folder contains the code for the two practice tasks
-* /practice/\*task\*/src contains correct and buggy versions of the system under test, you should not change these classes, but may need to read them
-* /practice/\*task\*/tests/password.test.js this is where you add your tests
-* /practice/\*task\*/tests/
+## Find the two exercises
 
+| Required exercise | Code to test | Your tests |
+| --- | --- | --- |
+| [Password testing](../instructions/password-testing.md) | [practice/practice_write_run_tests/src/](practice/practice_write_run_tests/src/) | [practice/practice_write_run_tests/tests/](practice/practice_write_run_tests/tests/) |
+| [Testing with mocks](../instructions/testing-with-mocks.md) | [practice/practice_write_mocked_tests/src/](practice/practice_write_mocked_tests/src/) | [practice/practice_write_mocked_tests/tests/](practice/practice_write_mocked_tests/tests/) |
 
-## Selecting version of Password 
-select which version of Password by commenting out/in in the top of the file password.test.js 
+Keep the provided correct and buggy implementations unchanged. Jest includes mocking support.
 
-```js
-...
-import { Password } from '../src/sut_versions/BugMissingNumberCheck';
-//import { Password } from '../src/sut_versions/BugWrongMessage'; 
-//import { Password } from '../src/Correct'; 
-...
-```
+## Install and run
 
+From the repository root, enter `js` and install the tools:
 
-Move into js folder
 ```bash
 cd js
-```
-
-Install tools with:
-```bash
 npm install
 ```
 
-Run all test suites:
+Run all suites with coverage:
+
 ```bash
 npm test
 ```
 
-Example output:
-```bash
- PASS  practice/practice_write_run_tests/tests/password.test.js                                                                                                                                                                                                             
- PASS  examination/examination.test.js
-------------|---------|----------|---------|---------|-------------------                                                                                                                                                                                                   
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
-------------|---------|----------|---------|---------|-------------------
-All files   |    5.55 |        0 |       0 |    5.88 |                  
- Correct.js |    5.55 |        0 |       0 |    5.88 | 3-40             
-------------|---------|----------|---------|---------|-------------------
+To work on each exercise separately, run these commands from `js/`:
 
-Test Suites: 2 passed, 2 total
-Tests:       2 passed, 2 total
-Snapshots:   0 total
-Time:        0.838 s, estimated 1 s
+```bash
+npm test -- practice/practice_write_run_tests
+npm test -- practice/practice_write_mocked_tests
 ```
+
+**Run and complete both exercises.** After a coverage run, open `coverage/lcov-report/index.html` to inspect the report.
+
+## Select a Password implementation
+
+In `practice/practice_write_run_tests/tests/password.test.js`, select the implementation by keeping one import active at a time. The versions are directly inside `src/`, for example:
+
+```js
+import { Password } from '../src/BugMissingNumberCheck.js';
+// import { Password } from '../src/BugWrongMessage.js';
+// import { Password } from '../src/Correct.js';
+```
+
+Run the same suite against every provided version and record your results, as described in [Password testing](../instructions/password-testing.md).
+
+## Examination material
+
+The [examination/](examination/) folder is reserved for examination material. Leave it unchanged until instructed by teaching staff. Read the [assessment instructions and reflection questions](../instructions/assessment.md).
+
+[Back to the start guide](../README.md)
